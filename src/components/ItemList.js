@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import Item from "./Item";
 
 const ItemList = ({ cart, handleClick }) => {
@@ -14,6 +15,11 @@ const ItemList = ({ cart, handleClick }) => {
       <Item cart={cart} handleClick={handleClick} />;
     </div>
   );
+};
+
+ItemList.propTypes = {
+  cart: PropTypes.array,
+  handleClick: PropTypes.func,
 };
 
 export default ItemList;
